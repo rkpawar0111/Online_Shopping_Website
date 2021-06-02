@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/style1.css">
+<html>
+	<head>
+		<title>REVIEW-RATE</title>
+	</head>
+	<h1>
+		YOUR FEED-BACK IS IMPORTANT
+	</h1>
+<body>
+		<br style="line-height:50px;">
+		<form method="post" action="/rate1/<%=pid%>/<%=cid%>">
+			<font size="+1">RATE:</font>
+			<input type="number" name="rate" min="1" max="10" required>
+			<br><br>
+			<font size="+1">REVIEW:</font>
+			<input style="width:300px;height:100px;" type="text" name="review" maxlength="50" required/>
+			<br><br>
+			<a>
+				<button>SUBMIT</button>
+			</a>
+		</form>
+</body>
+</html>

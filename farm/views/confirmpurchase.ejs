@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/style1.css">
+<html>
+	<head>
+		<title>CONFIRM-PURCHASE</title>
+	</head>
+<h1>
+	PLEASE CLICK ON PURCHASE ,IF DETAILS ARE CORRECT
+</h1>
+	<br style="line-height:50px;">
+<body>
+	<br style="line-height:30px;">
+	<h2 style="text-align:center;">
+		YOUR PERSONAL INFORMATION
+	</h2>
+	<br style="line-height:10px;">
+		<div>
+		<table align="center" border="1">
+			<thead>
+			  <tr>
+				<th>CUSTOMER ID</th>
+				<th>CUSTOMER NAME</th>
+				<th>MOBILE NO.</th>
+				<th>ADDRESS</th>
+				<th>POSTAL-CODE</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in info) {%>
+				<tr>
+					<td><%=info[ar].cid%></td>
+					<td><%=info[ar].name%></td>
+					<td><%=info[ar].mobile%></td>
+					<td><%=info[ar].address%></td>
+					<td><%=pincode%></td>
+				</tr>
+				<% } %>
+			</tbody>
+			</table>
+		</div>
+	<br style="line-height:30px;">
+	<h2 style="text-align:center;">
+		YOUR TRANSACTION INFORMATION
+	</h2>
+	<br style="line-height:30px;">
+		<div>
+		<table align="center" border="1">
+			<thead>
+			  <tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+				<th>QUANTITY</th>
+				<th>TOTAL</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data) {%>
+				<tr>
+					<td><%=data[ar].pid%></td>
+					<td><%=data[ar].pname%></td>
+					<td><%=data[ar].price%></td>
+					<td><%=data[ar].quantity%></td>
+					<td><%=data[ar].total%></td>
+				</tr>
+				<% } %>
+			</tbody>
+			</table>
+		</div>
+	<br style="line-height:30px;">
+	<form method="post" action="/final/<%=cid%>/<%=data[0].pname%>/<%=data[0].quantity%>/<%=data[0].total%>">
+		    <a>
+				<button>PURCHASE</button>
+		    </a>
+	</form>
+</body>
+</html>

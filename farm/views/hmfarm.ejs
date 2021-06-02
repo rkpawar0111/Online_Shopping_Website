@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/style1.css">
+<html>
+	<head>
+		<title>farmer-feedback</title>
+	</head>
+<body>
+	<h1 style="text-align:center;color:white;background-color:red;">
+		HI THERE, HERE IS YOUR FEED-BACK
+	</h1>
+	<br><br>
+    <div style="margin-left:130px;">
+		<table style="color:red;border-color:red;margin-left:340px;" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>AVGREAGE RATING</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data1) {%>
+				<tr>
+					<td><%=data1[ar].pid%></td>
+					<td><%=data1[ar].pname%></td>
+					<td><%=data1[ar].avg_rating%></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+	<br style="line-height:20px;">
+	<form method="post" action="/signup">
+		<a>
+		<button>
+			EXIT
+		</button>
+		</a>
+	</form>
+	<br style="line-height:20px;">
+	<div>
+		<table style="color:red;border-color:red;margin-left:520px;" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>PRODUCT ID</th>
+				<th>REVIEWS</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data2) {%>
+				<tr>
+					<td><%=data2[ar].pid%></td>
+					<td><%=data2[ar].rv%></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+		<br><br>
+	</div>
+</body>
+</html>

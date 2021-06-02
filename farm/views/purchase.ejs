@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/style.css">
+<html>
+	<head>
+		<title>PURCHASE-ITEM</title>
+	</head>
+<h1>
+	PLEASE CONFIRM BEFORE PURCHASING 
+</h1>
+	<br style="line-height:50px;">
+<body>
+	<br style="line-height:30px;">
+		<div>
+		<table align="center" border="1">
+			<thead>
+			  <tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data) {%>
+				<tr>
+					<td><%=data[ar].pid%></td>
+					<td><%=data[ar].pname%></td>
+					<td><%=data[ar].price%></td>
+				</tr>
+				<% } %>
+			</tbody>
+			</table>
+		</div>
+	    <br style="line-height:30px;">
+		<form method="post" action="/buy/<%=pid%>/<%=cid%>">
+			<div>
+			<font size="+1">ENTER-QUANTITY:</font>
+			<input type="number" name="quantity" max="5" min="1" required/>
+			<br><br>
+			<font size="+1">ENTER-POSTAL-CODE:</font>
+			<input type="text" id="postal" name="pincode" required/>
+		    <br><br>
+		    <a>
+				<button onclick="return fun6()">CONFIRM</button>
+		    </a>
+			</div>
+		</form>
+</body>
+	<script>
+	function fun6(){
+			var pincode = document.getElementById('postal').value;
+			var ch = /^([0-9]{6})$/;
+			if(!(pincode.match(ch))){
+			    alert("Invalid postal code : "+pincode);
+			    return false;
+			}else{
+				return true;
+			}
+		}
+	</script>
+</html>

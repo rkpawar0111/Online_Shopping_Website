@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/style.css">
+<html>
+	<head>
+		<title>PURCHASE-OPTION</title>
+	</head>
+	<br style="line-height:100px;">
+	<h1>
+		WANT TO RECIVE EMAIL NOTIFICATION ABOUT THE PURCHASE, CLICK BELOW EMAIL
+	</h1>
+	<form method="post" action="/mail/<%=cid%>/<%=mail%>/<%=pname%>/<%=quantity%>/<%=total%>">
+		<a>
+			<button>EMAIL</button>
+		</a>
+	</form>
+	<h1>
+		DONT WANT TO RECIEVE EMAIL, CLICK BELOW SKIP
+	</h1>
+	<form method="post" action="/thanks/<%=cid%>/<%=mail%>">
+		<a>
+			<button>SKIP</button>
+		</a>
+	</form>
+</html>

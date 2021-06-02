@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>HOME-PAGE</title>
+	</head>
+<h1 style="color:white;text-align:center;background-color:red;">
+	SHOP THE WORLDS FINEST ITEMS
+</h1>
+<body style="background-color: rgb(50, 115, 220, 0.3);">
+	<div style="float: left;">
+		<table style="align-content: left;background:white;color:red;border-color:red;margin-left:30px;" border="1">
+			<tr style="background-color:red;color:white;">
+				<th>PICTURE</th>
+			</tr>
+			<tbody>
+				<tr>
+				<form method="post" action="/item/1/<%=cid%>">
+					<td>
+						<button><img src="/images/apple.jpg" style="width:350px;height:200px;"/></button>
+					</td>
+				</form>
+			    </tr>
+				<tr>
+				<form method="post" action="/item/2/<%=cid%>">
+					<td>
+						<button><img src="/images/banana.jpg" style="width:350px;height:200px;"/></button>
+					</td>
+				</form>
+			    </tr>
+				<tr>
+				<form method="post" action="/item/3/<%=cid%>">
+					<td>
+						<button><img src="/images/mango.jpg" style="width:350px;height:200px;"/></button>
+					</td>
+				</form>
+			    </tr>
+				<tr>
+				<form method="post" action="/item/4/<%=cid%>">
+					<td>
+						<button><img src="/images/carrot.jpg" style="width:350px;height:200px;"/></button>
+					</td>
+				</form>
+			    </tr>
+				<tr>
+				<form method="post" action="/item/5/<%=cid%>">
+					<td>
+						<button><img src="/images/raddish.jpg" style="width:350px;height:200px;" /></button>
+					</td>
+				</form>
+			    </tr>
+				<tr>
+				<form method="post" action="/item/6/<%=cid%>">
+					<td>
+						<button><img src="/images/wheat.jpg" style="width:350px;height:200px;"/></button>
+					</td>
+				</form>
+			    </tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left">
+		<table style="color:red;border-color:red" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data) {%>
+				<tr>
+					<td style="width:270px;height:209px;" ><%=data[ar].pname%></td>
+					<td style="width:270px;height:209px;"><%=data[ar].price%>/- per kg</td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left">
+		<table style="color:red;border-color:red" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>REVIEWS</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/1/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/2/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/3/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/4/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/5/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:350px;height:209px;" >
+						<form method="post" action="/review/6/<%=cid%>">
+							<button style="color:red;border-color:red">REVIEWS</button>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</body>
+</html>

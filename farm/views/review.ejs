@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/style1.css">
+<html>
+	<head>
+		<title>REVIEWS</title>
+	</head>
+<body>
+		<form method="post" action="/rate/<%=pid%>/<%=cid%>">
+			<a>
+				<button>REVIEW AND RATE</button>
+			</a>
+		</form>
+	<br style="line-height:30px;">
+	<h1 style="text-align:center;color:white;background-color:red;">
+		REVIEWS AND RATING
+	</h1>
+	<br style="line-height:50px;">
+    <div style="float:left;">
+		<table style="color:red;border-color:red;margin-right:70px;margin-left:50px;" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>CUSTOMER NAME</th>
+				<th>CUSTOMER REVIEW</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data1) {%>
+				<tr>
+					<td style="width:270px;height:209px;" ><%=data1[ar].cfname%></td>
+					<td style="width:270px;height:209px;"><%=data1[ar].rv%></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+	<div style="float: left">
+		<table style="color:red;border-color:red" border="1">
+			<thead style="background-color:red;color:white;">
+			  <tr>
+				<th>CUSTOMER NAME</th>
+				<th>CUSTOMER RATING</th>
+			  </tr>
+			</thead>
+			<tbody style="text-align:center;">
+				<% for( var ar in data2) {%>
+				<tr>
+					<td style="width:270px;height:209px;" ><%=data2[ar].cfname%></td>
+					<td style="width:270px;height:209px;"><%=data2[ar].rt%>/10</td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

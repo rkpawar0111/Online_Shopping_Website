@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/style1.css">
+<html>
+	<head>
+		<title>PROFILE-VIEW</title>
+	</head>
+<h1 style="color:white;text-align:center;background-color:red;">
+	 YOUR PROFILE
+</h1>
+	<br style="line-height:50px;">
+<body>
+		<div>
+		<table align="center" border="1">
+				<tr>
+					<th style="background-color:red;color:white;">NAME:</th>
+					<td><%=data[0].name%></td>
+				</tr>
+				<tr>
+					<th style="background-color:red;color:white;">MOBILE NO.:</th>
+					<td><%=data[0].mobile%></td>
+				</tr>
+				<tr>
+					<th style="background-color:red;color:white;">EMAIL:</th>
+					<td><%=data[0].email%></td>
+				</tr>
+				<tr>
+					<th style="background-color:red;color:white;">ADDRESS:</th>
+					<td><%=data[0].address%></td>
+				</tr>
+			</table>
+		</div>
+	<br style="line-height:30px;">
+	<form method="post" action="/homefront1/<%=cid%>">
+		<a>
+			<button>BACK</button>
+		</a>
+	</form>
+</body>
+</html>
+

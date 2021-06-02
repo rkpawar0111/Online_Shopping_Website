@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/style.css">
+<script type="text/javascript" src="/jsfiles/testing.js"></script>
+<html>
+	<head>
+		<title>FARMER-SIGN-UP</title>
+	</head>
+<h1>
+		ENTER THE DETAILS
+</h1>
+<body>
+		<form method="post" action="/fregister">
+			<font size="+1">FIRST_NAME:</font>
+			<input type="text" id="fname" name="fname" maxlength="15"  required/>
+			<br><br>
+			<font size="+1">LAST_NAME:</font>
+			<input type="text" id="lname" name="lname" maxlength="15"  required/>
+			<br><br>
+			<font size="+1">LOGIN_NAME:</font>
+			<input type="text" name="log_name" maxlength="15" required/>
+			<br><br>
+			<font size="+1">LOGIN_PASSWORD:</font>
+			<input type="password" name="log_pass" maxlength="15" required/>
+			<br><br>
+			<font size="+1">MOBILE_NO:</font>
+			<input type="tel" id="mob" name="mob" maxlength="10" required/>
+			<br><br>
+			<font size="+1">EMAIL:</font>
+			<input type="email" id="eml" name="email" required/>
+			<br><br>
+			<font size="+1">ADDRESS:</font>
+			<input type="text" name="add" maxlength="250" required/>
+			<br><br>
+			<a>
+				<button onclick="return fun()">SIGN UP</button>
+			</a>
+		</form>
+	</body>
+</html>
